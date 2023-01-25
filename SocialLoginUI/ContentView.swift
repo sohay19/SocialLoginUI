@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GoogleSignIn
 
 struct ContentView: View {
     var body: some View {
@@ -16,6 +17,11 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+                // Check if `user` exists; otherwise, do something with `error`
+            }
+        }
     }
 }
 
