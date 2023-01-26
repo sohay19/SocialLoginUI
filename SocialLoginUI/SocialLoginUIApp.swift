@@ -12,7 +12,7 @@ import GoogleSignIn
 struct SocialLoginUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(userData: UserData(url: nil, name: "", email: ""))
                 .onOpenURL { url in
                     GIDSignIn.sharedInstance.handle(url)
                 }
