@@ -77,10 +77,10 @@ struct ContentView: View {
             isLogined = true
         }
     }
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView(userData: UserData(url: nil, name: "", email: ""))
-        }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(userData: UserData(url: nil, name: "", email: ""))
     }
 }
